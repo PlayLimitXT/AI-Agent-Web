@@ -1,0 +1,106 @@
+name: Bug report
+description: 报告一个可复现的问题
+title: '[Bug]: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。提交前请确认已移除 API Key、个人配置与敏感对话内容。
+        安全漏洞请按 SECURITY.md 私下报告，不要公开提交。
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已搜索现有 Issue，未找到重复问题
+          required: true
+        - label: 我已移除 API Key、令牌与个人数据
+          required: true
+        - label: 这不是安全漏洞（安全漏洞请走私密报告）
+          required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 问题描述
+      description: 实际发生了什么？
+      placeholder: 简要说明现象与影响。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开 …
+        2. 配置 …
+        3. 点击 …
+        4. 观察到 …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+      placeholder: 你原本期望发生什么？
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: PLXT 版本
+      description: 见 README、CHANGELOG 或页面页脚。
+      placeholder: 3.3.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: 部署方式
+      options:
+        - 静态托管（HTTPS）
+        - 本地 HTTP（npm run serve）
+        - file:// 直接打开
+        - 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: protocol
+    attributes:
+      label: 模型协议
+      options:
+        - OpenAI 兼容（Chat Completions）
+        - Anthropic Messages
+        - Gemini generateContent
+        - 与协议无关
+        - 不确定
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: 浏览器与操作系统
+      placeholder: Chrome 142 / macOS 15
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: 控制台错误或日志
+      description: 请移除其中的密钥与个人信息。
+      render: shell
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充信息
+      description: 截图、录屏、相关配置（已脱敏）或你已尝试的排查。

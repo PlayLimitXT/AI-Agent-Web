@@ -1,0 +1,40 @@
+{
+  "name": "PLXT · 本地 AI 工作站",
+  "short_name": "AI Agent - PLXT",
+  "description": "零构建、本地优先的多模型 AI 工作站：分支对话、工具与检索、完整参数控制、PWA 离线可用",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#080a16",
+  "theme_color": "#080a16",
+  "lang": "zh-CN",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "version": "3.3.0",
+  "id": "./",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "dir": "ltr",
+  "shortcuts": [
+    {
+      "name": "新建对话",
+      "short_name": "新对话",
+      "description": "直接开始一个新会话",
+      "url": "./index.html?new=1",
+      "icons": [
+        {
+          "src": "logo.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ]
+}

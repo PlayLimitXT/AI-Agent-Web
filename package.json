@@ -1,0 +1,34 @@
+{
+  "name": "plxt-local-ai-workspace",
+  "version": "3.3.0",
+  "private": true,
+  "description": "Zero-build, local-first browser AI workspace with branching conversations, tools, MCP and full parameter control.",
+  "license": "MIT",
+  "author": "PlayLimitXT",
+  "keywords": [
+    "ai",
+    "chat",
+    "llm",
+    "local-first",
+    "privacy",
+    "pwa",
+    "mcp",
+    "openai",
+    "anthropic",
+    "gemini",
+    "static-site"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "format": "prettier --write \"**/*.{js,mjs,css,html,json,md,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{js,mjs,css,html,json,md,yml,yaml}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}
